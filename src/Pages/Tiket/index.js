@@ -18,12 +18,10 @@ const Tiket = () => {
   const [tiket, setTiket] = useState(list);
   useEffect(() => {
     axios
-      .get(
-        "https://yantek.padipresence.id/api/mastersupport/getdata/sub_type_ticket"
-      )
+      .get("https://yantek.padipresence.id/api/mastersupport/getdata")
       .then((response) => {
         setTiket(response.data);
-        // console.log(response);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
